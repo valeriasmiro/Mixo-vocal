@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIXO — студия современного вокала</title>
+<meta name="description" content="MIXO — студия современного вокала. Абонементы, разовые занятия, расписание и афиши концертов.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="nav__inner">
+    <a href="#top" class="nav__logo">MIXO</a>
+    <nav class="nav__links">
+      <a href="#about">Студия</a>
+      <a href="#pricing">Абонементы</a>
+      <a href="#promo">Акции</a>
+      <a href="#gallery">Афиши</a>
+      <a href="#schedule">Расписание</a>
+    </nav>
+    <a href="#schedule" class="nav__cta">Записаться</a>
+    <button class="nav__burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero__wave" aria-hidden="true">
+    <svg viewBox="0 0 1200 200" preserveAspectRatio="none">
+      <path class="wave-path" d="M0,100 C 100,20 200,180 300,100 C 400,20 500,180 600,100 C 700,20 800,180 900,100 C 1000,20 1100,180 1200,100" fill="none" stroke="currentColor" stroke-width="2"/>
+    </svg>
+  </div>
+  <p class="hero__eyebrow">Студия современного вокала</p>
+  <h1 class="hero__title">M<span class="hero__title-i">i</span>xo</h1>
+  <p class="hero__tagline">Голос — это инструмент. Мы учим им пользоваться.</p>
+  <a href="#about" class="hero__scroll">
+    <span>Слушать дальше</span>
+    <svg width="14" height="22" viewBox="0 0 14 22" fill="none"><path d="M7 1v18M1 13l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="about" id="about">
+  <div class="section__inner about__grid">
+    <div class="about__label">
+      <span class="eyebrow">О студии</span>
+      <h2>Пространство,<br>где голос находит форму</h2>
+    </div>
+    <div class="about__body">
+      <!-- РЕДАКТИРУЕТСЯ: замените текст на реальное описание студии -->
+      <p>MIXO — студия современного вокала для тех, кто хочет петь свободно: от поп и джаза до рока и авторской песни. Мы работаем с постановкой голоса, дыханием, сценической подачей и репертуаром — без академической зажатости и лишней теории.</p>
+      <p>Небольшие группы и индивидуальные занятия, современное оборудование, живой аккомпанемент и преподаватели с концертной практикой. Приходят те, кто только начинает, и те, кто выходит на сцену уже сейчас.</p>
+      <div class="about__stats">
+        <div class="stat">
+          <span class="stat__num">7</span>
+          <span class="stat__label">лет студии</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">12</span>
+          <span class="stat__label">педагогов</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">300+</span>
+          <span class="stat__label">учеников</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRICING ===================== -->
+<section class="pricing" id="pricing">
+  <div class="section__inner">
+    <span class="eyebrow eyebrow--light">Абонементы и занятия</span>
+    <h2 class="pricing__title">Выберите свой темп</h2>
+    <p class="pricing__note">Цены и описания ниже — пример. Отредактируйте их в файле <code>index.html</code> в разделе «pricing».</p>
+
+    <div class="pricing__grid">
+      <!-- РЕДАКТИРУЕТСЯ: карточка 1 -->
+      <article class="plan">
+        <h3 class="plan__name">Разовое занятие</h3>
+        <p class="plan__price">1 500 ₽</p>
+        <p class="plan__desc">Индивидуальное занятие 60 минут. Подходит, чтобы попробовать студию или разобрать конкретную задачу — песню, партию, выступление.</p>
+        <ul class="plan__list">
+          <li>60 минут с педагогом</li>
+          <li>Разбор техники и репертуара</li>
+          <li>Без привязки к расписанию</li>
+        </ul>
+      </article>
+
+      <!-- РЕДАКТИРУЕТСЯ: карточка 2 -->
+      <article class="plan plan--accent">
+        <p class="plan__badge">популярный</p>
+        <h3 class="plan__name">Абонемент «Старт»</h3>
+        <p class="plan__price">5 200 ₽ <span>/ 4 занятия</span></p>
+        <p class="plan__desc">Ежемесячный абонемент для регулярной практики. Занятия действуют 30 дней с момента покупки.</p>
+        <ul class="plan__list">
+          <li>4 занятия по 60 минут</li>
+          <li>Гибкая запись на месяц</li>
+          <li>Скидка к разовым занятиям</li>
+        </ul>
+      </article>
+
+      <!-- РЕДАКТИРУЕТСЯ: карточка 3 -->
+      <article class="plan">
+        <h3 class="plan__name">Абонемент «Сцена»</h3>
+        <p class="plan__price">9 600 ₽ <span>/ 8 занятий</span></p>
+        <p class="plan__desc">Углублённый курс на два месяца: постановка голоса, работа над номером и подготовка к выступлению.</p>
+        <ul class="plan__list">
+          <li>8 занятий по 60 минут</li>
+          <li>Разбор сценической подачи</li>
+          <li>Запись репетиции в подарок</li>
+        </ul>
+      </article>
+
+      <!-- РЕДАКТИРУЕТСЯ: карточка 4 -->
+      <article class="plan">
+        <h3 class="plan__name">Групповое занятие</h3>
+        <p class="plan__price">900 ₽ <span>/ занятие</span></p>
+        <p class="plan__desc">Мини-группы до 5 человек: вокальный ансамбль, многоголосие, работа над сценическим движением.</p>
+        <ul class="plan__list">
+          <li>Группы 3–5 человек</li>
+          <li>90 минут</li>
+          <li>Совместные выступления</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROMOTIONS ===================== -->
+<section class="promo" id="promo">
+  <div class="section__inner">
+    <span class="eyebrow">Акции</span>
+    <h2>Специальные предложения</h2>
+    <div class="promo__grid">
+      <!-- РЕДАКТИРУЕТСЯ: акция 1 -->
+      <div class="promo__card">
+        <p class="promo__tag">Новым ученикам</p>
+        <h3>Первое занятие −50%</h3>
+        <p>Приходите познакомиться со студией: первое индивидуальное занятие для новых учеников стоит вдвое дешевле.</p>
+      </div>
+      <!-- РЕДАКТИРУЕТСЯ: акция 2 -->
+      <div class="promo__card">
+        <p class="promo__tag">Приведи друга</p>
+        <h3>−10% каждому</h3>
+        <p>Приведите друга на абонемент — и вы оба получите скидку 10% на следующую оплату.</p>
+      </div>
+      <!-- РЕДАКТИРУЕТСЯ: акция 3 -->
+      <div class="promo__card">
+        <p class="promo__tag">Ко дню рождения</p>
+        <h3>Занятие в подарок</h3>
+        <p>В месяц вашего дня рождения — одно занятие абонемента бесплатно.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== POSTER GALLERY ===================== -->
+<section class="gallery" id="gallery">
+  <div class="section__inner">
+    <span class="eyebrow eyebrow--light">Афиши</span>
+    <h2 class="gallery__title">Стена концертов</h2>
+    <p class="gallery__note">Наведите или нажмите на афишу, чтобы рассмотреть её ближе.</p>
+    <div class="gallery__wall" id="galleryWall">
+      <!-- заполняется через posters/posters.json -->
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox__close" id="lbClose" aria-label="Закрыть">&times;</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Предыдущая афиша">&#8249;</button>
+  <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Следующая афиша">&#8250;</button>
+
+  <div class="lightbox__stage">
+    <div class="lightbox__frame">
+      <div class="lightbox__frame-inner" id="lbZoomWrap">
+        <img id="lbImage" src="" alt="">
+      </div>
+      <span class="lightbox__corner lightbox__corner--tl"></span>
+      <span class="lightbox__corner lightbox__corner--tr"></span>
+      <span class="lightbox__corner lightbox__corner--bl"></span>
+      <span class="lightbox__corner lightbox__corner--br"></span>
+    </div>
+    <p class="lightbox__hint" id="lbHint">Нажмите на афишу, чтобы приблизить</p>
+  </div>
+
+  <div class="lightbox__placard">
+    <p class="lightbox__placard-title" id="lbTitle"></p>
+    <p class="lightbox__placard-sub">MIXO · студия современного вокала</p>
+  </div>
+</div>
+
+<!-- ===================== SCHEDULE + ADDRESS ===================== -->
+<section class="schedule" id="schedule">
+  <div class="section__inner schedule__grid">
+    <div class="schedule__block">
+      <span class="eyebrow">Расписание</span>
+      <h2>Когда мы работаем</h2>
+      <!-- РЕДАКТИРУЕТСЯ: часы работы -->
+      <table class="schedule__table">
+        <tr><td>Понедельник — пятница</td><td>10:00 — 21:00</td></tr>
+        <tr><td>Суббота</td><td>11:00 — 19:00</td></tr>
+        <tr><td>Воскресенье</td><td>выходной</td></tr>
+      </table>
+      <p class="schedule__note">Запись на занятия — по телефону или в мессенджере администратора.</p>
+    </div>
+    <div class="schedule__block">
+      <span class="eyebrow">Адрес</span>
+      <h2>Где нас найти</h2>
+      <!-- РЕДАКТИРУЕТСЯ: адрес и контакты -->
+      <p class="schedule__address">г. Москва, ул. Примерная, д. 10<br>2 этаж, студия MIXO</p>
+      <p class="schedule__contacts">
+        <a href="tel:+70000000000">+7 (000) 000-00-00</a><br>
+        <a href="mailto:hello@mixovocal.ru">hello@mixovocal.ru</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="section__inner footer__inner">
+    <span class="footer__logo">MIXO</span>
+    <p>&copy; <span id="year"></span> Студия современного вокала MIXO</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
