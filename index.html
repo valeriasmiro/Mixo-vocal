@@ -44,7 +44,13 @@
     <span></span><span></span><span></span><span></span><span></span><span></span>
   </div>
 
-  <p class="hero__eyebrow">Студия современного вокала</p>
+  <div class="notes" aria-hidden="true">
+    <svg class="note note--1" viewBox="0 0 24 24"><path fill="currentColor" d="M9 3v10.55A4 4 0 1 0 11 17V7h6V3H9Z"/></svg>
+    <svg class="note note--2" viewBox="0 0 24 24"><path fill="currentColor" d="M9 3v10.55A4 4 0 1 0 11 17V7h6V3H9Z"/></svg>
+    <svg class="note note--3" viewBox="0 0 24 24"><path fill="currentColor" d="M9 3v10.55A4 4 0 1 0 11 17V7h6V3H9Z"/></svg>
+  </div>
+
+  <p class="hero__eyebrow"><span class="on-air" aria-hidden="true"></span>Студия современного вокала</p>
   <h1 class="hero__title">M<span class="hero__title-i">i</span>xo</h1>
   <p class="hero__tagline">Голос — это инструмент. Мы учим им пользоваться.</p>
   <a href="#about" class="hero__scroll">
@@ -92,7 +98,9 @@
   </div>
 </section>
 
-<div class="divider" aria-hidden="true"></div>
+<div class="eq-divider eq-divider--dark" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
 
 <!-- ===================== PRICING ===================== -->
 <section class="pricing" id="pricing">
@@ -104,7 +112,7 @@
     <div class="pricing__grid">
       <!-- РЕДАКТИРУЕТСЯ: карточка 1 -->
       <article class="plan">
-        <h3 class="plan__name">Разовое занятие</h3>
+        <h3 class="plan__name"><span class="mini-eq"><i></i><i></i><i></i><i></i></span>Разовое занятие</h3>
         <p class="plan__price">1 500 ₽</p>
         <p class="plan__desc">Индивидуальное занятие 60 минут. Подходит, чтобы попробовать студию или разобрать конкретную задачу — песню, партию, выступление.</p>
         <ul class="plan__list">
@@ -116,8 +124,8 @@
 
       <!-- РЕДАКТИРУЕТСЯ: карточка 2 -->
       <article class="plan plan--accent">
-        <p class="plan__badge"><span class="plan__badge-eq"><i></i><i></i><i></i></span>популярный</p>
-        <h3 class="plan__name">Абонемент «Старт»</h3>
+        <p class="plan__badge plan__badge--zebra"><span class="plan__badge-eq"><i></i><i></i><i></i></span>популярный</p>
+        <h3 class="plan__name"><span class="mini-eq"><i></i><i></i><i></i><i></i></span>Абонемент «Старт»</h3>
         <p class="plan__price">5 200 ₽ <span>/ 4 занятия</span></p>
         <p class="plan__desc">Ежемесячный абонемент для регулярной практики. Занятия действуют 30 дней с момента покупки.</p>
         <ul class="plan__list">
@@ -129,7 +137,7 @@
 
       <!-- РЕДАКТИРУЕТСЯ: карточка 3 -->
       <article class="plan">
-        <h3 class="plan__name">Абонемент «Сцена»</h3>
+        <h3 class="plan__name"><span class="mini-eq"><i></i><i></i><i></i><i></i></span>Абонемент «Сцена»</h3>
         <p class="plan__price">9 600 ₽ <span>/ 8 занятий</span></p>
         <p class="plan__desc">Углублённый курс на два месяца: постановка голоса, работа над номером и подготовка к выступлению.</p>
         <ul class="plan__list">
@@ -141,7 +149,7 @@
 
       <!-- РЕДАКТИРУЕТСЯ: карточка 4 -->
       <article class="plan">
-        <h3 class="plan__name">Групповое занятие</h3>
+        <h3 class="plan__name"><span class="mini-eq"><i></i><i></i><i></i><i></i></span>Групповое занятие</h3>
         <p class="plan__price">900 ₽ <span>/ занятие</span></p>
         <p class="plan__desc">Мини-группы до 5 человек: вокальный ансамбль, многоголосие, работа над сценическим движением.</p>
         <ul class="plan__list">
@@ -154,7 +162,9 @@
   </div>
 </section>
 
-<div class="divider divider--gold" aria-hidden="true"></div>
+<div class="eq-divider" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
 
 <!-- ===================== PROMOTIONS ===================== -->
 <section class="promo" id="promo">
@@ -165,26 +175,28 @@
       <!-- РЕДАКТИРУЕТСЯ: акция 1 -->
       <div class="promo__card">
         <p class="promo__tag">Новым ученикам</p>
-        <h3>Первое занятие −50%</h3>
+        <h3><span class="mini-eq"><i></i><i></i><i></i><i></i></span>Первое занятие −50%</h3>
         <p>Приходите познакомиться со студией: первое индивидуальное занятие для новых учеников стоит вдвое дешевле.</p>
       </div>
       <!-- РЕДАКТИРУЕТСЯ: акция 2 -->
       <div class="promo__card">
         <p class="promo__tag">Приведи друга</p>
-        <h3>−10% каждому</h3>
+        <h3><span class="mini-eq"><i></i><i></i><i></i><i></i></span>−10% каждому</h3>
         <p>Приведите друга на абонемент — и вы оба получите скидку 10% на следующую оплату.</p>
       </div>
       <!-- РЕДАКТИРУЕТСЯ: акция 3 -->
       <div class="promo__card">
         <p class="promo__tag">Ко дню рождения</p>
-        <h3>Занятие в подарок</h3>
+        <h3><span class="mini-eq"><i></i><i></i><i></i><i></i></span>Занятие в подарок</h3>
         <p>В месяц вашего дня рождения — одно занятие абонемента бесплатно.</p>
       </div>
     </div>
   </div>
 </section>
 
-<div class="divider" aria-hidden="true"></div>
+<div class="eq-divider eq-divider--dark" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
 
 <!-- ===================== POSTER GALLERY ===================== -->
 <section class="gallery" id="gallery">
@@ -223,7 +235,9 @@
   </div>
 </div>
 
-<div class="divider divider--gold" aria-hidden="true"></div>
+<div class="eq-divider" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
 
 <!-- ===================== SCHEDULE + ADDRESS ===================== -->
 <section class="schedule" id="schedule">
@@ -251,6 +265,10 @@
     </div>
   </div>
 </section>
+
+<div class="eq-divider eq-divider--dark" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
 
 <footer class="footer">
   <div class="section__inner footer__inner">
