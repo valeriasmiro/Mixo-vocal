@@ -5,6 +5,30 @@
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
+/* ---------------- Появление элементов при скролле ---------------- */
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const revealObserver = (!prefersReducedMotion && 'IntersectionObserver' in window)
+  ? new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 })
+  : null;
+
+function revealOnScroll(el) {
+  if (!revealObserver) {
+    el.classList.add('is-visible');
+    return;
+  }
+  el.classList.add('reveal');
+  revealObserver.observe(el);
+}
+
+document.querySelectorAll('.plan, .promo__card, .stat').forEach(revealOnScroll);
+
 /* ---------------- Мобильное меню ---------------- */
 const nav = document.querySelector('.nav');
 const burger = document.getElementById('burger');
@@ -49,6 +73,7 @@ function renderPosters(list) {
     const file = item.file || item;
     return `
       <figure class="frame" data-index="${i}" tabindex="0" role="button" aria-label="Открыть афишу «${title}»">
+        <span class="frame__ribbon" aria-hidden="true"></span>
         <div class="frame__mat">
           <img src="posters/${file}" alt="${title}" loading="lazy"
                onerror="this.closest('.frame').style.display='none'">
@@ -65,6 +90,7 @@ function renderPosters(list) {
         openLightbox(Number(frame.dataset.index));
       }
     });
+    revealOnScroll(frame);
   });
 }
 
