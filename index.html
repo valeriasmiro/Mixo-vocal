@@ -31,48 +31,37 @@
 
 <!-- ===================== HERO ===================== -->
 <section class="hero">
-  <div class="hero__wave" aria-hidden="true">
-    <svg viewBox="0 0 1200 200" preserveAspectRatio="none">
-      <path class="wave-path" d="M0,100 C 100,20 200,180 300,100 C 400,20 500,180 600,100 C 700,20 800,180 900,100 C 1000,20 1100,180 1200,100" fill="none" stroke="currentColor" stroke-width="2"/>
+  <!-- Атмосферный фон: тёмный градиент + золотое сияние + волны -->
+  <div class="hero__bg" aria-hidden="true">
+    <svg class="hero__bg-waves" viewBox="0 0 1600 900" preserveAspectRatio="none">
+      <path class="bgwave bgwave--1" d="M0,430 C160,360 260,500 420,430 C580,360 680,500 840,430 C1000,360 1100,500 1260,430 C1380,385 1480,410 1600,430" />
+      <path class="bgwave bgwave--2" d="M0,470 C160,540 260,400 420,470 C580,540 680,400 840,470 C1000,540 1100,400 1260,470 C1380,515 1480,490 1600,470" />
+      <path class="bgwave bgwave--3" d="M0,450 C160,400 260,510 420,450 C580,400 680,510 840,450 C1000,400 1100,510 1260,450 C1380,420 1480,440 1600,450" />
     </svg>
   </div>
 
-  <div class="notes" aria-hidden="true">
-    <svg class="note note--1" viewBox="0 0 24 24"><path fill="currentColor" d="M9 3v10.55A4 4 0 1 0 11 17V7h6V3H9Z"/></svg>
-    <svg class="note note--2" viewBox="0 0 24 24"><path fill="currentColor" d="M9 3v10.55A4 4 0 1 0 11 17V7h6V3H9Z"/></svg>
-    <svg class="note note--3" viewBox="0 0 24 24"><path fill="currentColor" d="M9 3v10.55A4 4 0 1 0 11 17V7h6V3H9Z"/></svg>
-  </div>
-
-  <p class="hero__eyebrow"><span class="on-air" aria-hidden="true"></span>Студия современного вокала</p>
-
-  <!-- Круглая эмблема-логотип: кольцо, "Mixo" (Baloo 2), эквалайзер по бокам, анимированные волны снизу -->
-  <div class="hero__emblem">
-    <h1 class="visually-hidden">MIXO — студия современного вокала</h1>
-
-    <svg class="hero__emblem-waves" viewBox="0 0 300 300" aria-hidden="true">
-      <path class="emblem-wave emblem-wave--1" d="M-20,168 C20,140 45,196 85,168 C125,140 150,196 190,168 C230,140 255,196 295,168 C320,150 330,160 340,168" />
-      <path class="emblem-wave emblem-wave--2" d="M-20,196 C20,224 45,168 85,196 C125,224 150,168 190,196 C230,224 255,168 295,196 C320,210 330,200 340,196" />
-      <path class="emblem-wave emblem-wave--3" d="M-20,222 C20,196 45,248 85,222 C125,196 150,248 190,222 C230,196 255,248 295,222 C320,208 330,218 340,222" />
-    </svg>
-
-    <div class="hero__emblem-ring" aria-hidden="true"></div>
-
-    <div class="hero__emblem-content">
-      <span class="hero__emblem-eq hero__emblem-eq--left" aria-hidden="true">
-        <i></i><i></i><i></i><i></i><i></i><i></i>
-      </span>
-      <span class="hero__emblem-word">Mixo</span>
-      <span class="hero__emblem-eq hero__emblem-eq--right" aria-hidden="true">
-        <i></i><i></i><i></i><i></i><i></i><i></i>
-      </span>
+  <div class="hero__content">
+    <!-- Круглая эмблема-логотип -->
+    <div class="hero__emblem">
+      <div class="hero__emblem-glow" aria-hidden="true"></div>
+      <div class="hero__emblem-ring" aria-hidden="true"></div>
+      <h1 class="hero__emblem-word">MIXO</h1>
     </div>
-  </div>
 
-  <p class="hero__tagline">Голос — это инструмент. Мы учим им пользоваться.</p>
-  <a href="#about" class="hero__scroll">
-    <span>Слушать дальше</span>
-    <svg width="14" height="22" viewBox="0 0 14 22" fill="none"><path d="M7 1v18M1 13l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </a>
+    <p class="hero__tagline">
+      Голос — это инструмент.<br>
+      <span>Мы учим им пользоваться.</span>
+    </p>
+
+    <a href="#schedule" class="hero__cta">Записаться</a>
+
+    <a href="#about" class="hero__scroll" aria-label="Слушать дальше">
+      <span class="hero__scroll-eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+      <svg width="16" height="10" viewBox="0 0 16 10" fill="none" aria-hidden="true">
+        <path d="M1 1l7 7 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
 </section>
 
 <!-- ===================== TICKER ===================== -->
