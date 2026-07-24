@@ -18,7 +18,15 @@
   <!-- ===================== НАВИГАЦИЯ ===================== -->
   <header class="nav" id="top">
     <div class="nav__inner">
-      <a href="#top" class="nav__logo">MIXO</a>
+      <a href="#top" class="nav__logo">
+        <svg class="nav__logo-icon" viewBox="0 0 48 64" aria-hidden="true">
+          <rect x="16" y="4" width="16" height="30" rx="8" fill="none" stroke="currentColor" stroke-width="3"/>
+          <path d="M10 28 a14 14 0 0 0 28 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          <line x1="24" y1="42" x2="24" y2="54" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          <line x1="14" y1="54" x2="34" y2="54" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span>MIXO</span>
+      </a>
       <nav class="nav__links">
         <a href="#about">Студия</a>
         <a href="#process">Процесс</a>
@@ -35,28 +43,34 @@
 
   <!-- ===================== HERO ===================== -->
   <section class="hero">
-    <div class="hero__wave" aria-hidden="true">
-      <svg viewBox="0 0 1200 200" preserveAspectRatio="none">
-        <path class="wave-path" d="M0,100 C 100,20 200,180 300,100 C 400,20 500,180 600,100 C 700,20 800,180 900,100 C 1000,20 1100,180 1200,100" fill="none" stroke="currentColor" stroke-width="2"/>
+    <div class="hero__content">
+      <svg class="hero__mark" viewBox="0 0 48 64" aria-hidden="true">
+        <rect x="16" y="4" width="16" height="30" rx="8" fill="none" stroke="currentColor" stroke-width="2.4"/>
+        <line x1="20" y1="12" x2="28" y2="12" stroke="currentColor" stroke-width="1.6"/>
+        <line x1="20" y1="18" x2="28" y2="18" stroke="currentColor" stroke-width="1.6"/>
+        <line x1="20" y1="24" x2="28" y2="24" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M10 28 a14 14 0 0 0 28 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="24" y1="42" x2="24" y2="54" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="14" y1="54" x2="34" y2="54" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
       </svg>
+
+      <h1 class="hero__wordmark">MIXO</h1>
+
+      <p class="hero__subtitle">
+        <span class="hero__subtitle-line" aria-hidden="true"></span>
+        Vocal Studio
+        <span class="hero__subtitle-line" aria-hidden="true"></span>
+      </p>
+
+      <p class="hero__slogan">Where voices come to life</p>
+
+      <p class="hero__tagline">Голос становится вашим мощнейшим инструментом</p>
+
+      <a href="#about" class="hero__scroll">
+        <span>Узнать больше</span>
+        <svg width="14" height="22" viewBox="0 0 14 22" fill="none"><path d="M7 1v18M1 13l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
     </div>
-
-    <div class="notes" aria-hidden="true">
-      <svg class="note note--1" viewBox="0 0 24 24"><path fill="currentColor" d="M9 3v10.55A4 4 0 1 0 11 17V7h6V3H9Z"/></svg>
-      <svg class="note note--2" viewBox="0 0 24 24"><path fill="currentColor" d="M9 3v10.55A4 4 0 1 0 11 17V7h6V3H9Z"/></svg>
-      <svg class="note note--3" viewBox="0 0 24 24"><path fill="currentColor" d="M9 3v10.55A4 4 0 1 0 11 17V7h6V3H9Z"/></svg>
-    </div>
-
-    <p class="hero__eyebrow"><span class="on-air" aria-hidden="true"></span>Лаборатория современного вокала</p>
-
-    <h1 class="hero__title">MIXO</h1>
-
-    <p class="hero__tagline">Голос становится вашим мощнейшим инструментом</p>
-
-    <a href="#about" class="hero__scroll">
-      <span>Узнать больше</span>
-      <svg width="14" height="22" viewBox="0 0 14 22" fill="none"><path d="M7 1v18M1 13l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
   </section>
 
   <!-- ===================== О СТУДИИ ===================== -->
