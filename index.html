@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MIXO — лаборатория современного вокала</title>
-  <meta name="description" content="MIXO — лаборатория современного вокала. Профессиональная студия с уютной атмосферой, актуальные техники, все стили, абонементы." />
+  <meta name="description" content="MIXO — лаборатория современного вокала. Голос становится вашим мощнейшим инструментом." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&family=Permanent+Marker&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -20,10 +20,10 @@
     <div class="nav__inner">
       <a href="#top" class="nav__logo">
         <svg class="nav__logo-icon" viewBox="0 0 48 64" aria-hidden="true">
-          <rect x="16" y="4" width="16" height="30" rx="8" fill="none" stroke="currentColor" stroke-width="3"/>
-          <path d="M10 28 a14 14 0 0 0 28 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-          <line x1="24" y1="42" x2="24" y2="54" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-          <line x1="14" y1="54" x2="34" y2="54" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          <rect x="16" y="4" width="16" height="30" rx="8" fill="none" stroke="currentColor" stroke-width="4"/>
+          <path d="M10 28 a14 14 0 0 0 28 0" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          <line x1="24" y1="42" x2="24" y2="54" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          <line x1="14" y1="54" x2="34" y2="54" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
         </svg>
         <span>MIXO</span>
       </a>
@@ -34,42 +34,115 @@
         <a href="#gallery">Афиши</a>
         <a href="#schedule">Расписание</a>
       </nav>
-      <a href="#schedule" class="nav__cta">Записаться</a>
+      <a href="#schedule" class="nav__cta">Записаться <span>→</span></a>
       <button class="nav__burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- ===================== HERO ===================== -->
+  <!-- ===================== HERO / КОЛЛАЖ ===================== -->
   <section class="hero">
-    <div class="hero__content">
-      <svg class="hero__mark" viewBox="0 0 48 64" aria-hidden="true">
-        <rect x="16" y="4" width="16" height="30" rx="8" fill="none" stroke="currentColor" stroke-width="2.4"/>
-        <line x1="20" y1="12" x2="28" y2="12" stroke="currentColor" stroke-width="1.6"/>
-        <line x1="20" y1="18" x2="28" y2="18" stroke="currentColor" stroke-width="1.6"/>
-        <line x1="20" y1="24" x2="28" y2="24" stroke="currentColor" stroke-width="1.6"/>
-        <path d="M10 28 a14 14 0 0 0 28 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
-        <line x1="24" y1="42" x2="24" y2="54" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
-        <line x1="14" y1="54" x2="34" y2="54" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+    <div class="hero__topbar section__inner">
+      <div class="tag-row">
+        <span class="tag-chip tag-chip--yellow">VOCAL</span>
+        <span class="tag-chip">LAB.</span>
+        <span class="tag-chip">OF</span>
+        <span class="tag-chip">VOICE</span>
+      </div>
+      <svg class="barcode" viewBox="0 0 110 30" aria-hidden="true">
+        <g fill="currentColor">
+          <rect x="0" width="2" height="30"/><rect x="5" width="1" height="30"/><rect x="9" width="3" height="30"/>
+          <rect x="15" width="1" height="30"/><rect x="19" width="2" height="30"/><rect x="24" width="1" height="30"/>
+          <rect x="28" width="4" height="30"/><rect x="35" width="1" height="30"/><rect x="39" width="2" height="30"/>
+          <rect x="44" width="1" height="30"/><rect x="48" width="3" height="30"/><rect x="54" width="1" height="30"/>
+          <rect x="58" width="2" height="30"/><rect x="63" width="1" height="30"/><rect x="67" width="4" height="30"/>
+          <rect x="74" width="1" height="30"/><rect x="78" width="2" height="30"/><rect x="83" width="1" height="30"/>
+          <rect x="87" width="3" height="30"/><rect x="93" width="1" height="30"/><rect x="97" width="2" height="30"/>
+          <rect x="102" width="1" height="30"/><rect x="106" width="2" height="30"/>
+        </g>
       </svg>
+      <span class="mono-tag">MX-23</span>
+    </div>
 
-      <h1 class="hero__wordmark">MIXO</h1>
+    <div class="hero__stage section__inner">
+      <div class="hero__paper">
+        <span class="tape tape--tl" aria-hidden="true"></span>
+        <span class="tape tape--br" aria-hidden="true"></span>
 
-      <p class="hero__subtitle">
-        <span class="hero__subtitle-line" aria-hidden="true"></span>
-        Vocal Studio
-        <span class="hero__subtitle-line" aria-hidden="true"></span>
-      </p>
+        <h1 class="hero__title">MIXO</h1>
+        <p class="hero__desc">лаборатория современного вокала, где голос становится вашим мощнейшим <span class="marker">инструментом</span></p>
 
-      <p class="hero__slogan">Where voices come to life</p>
+        <div class="hero__actions">
+          <a href="#schedule" class="poster-btn">ЗАПИСАТЬСЯ <span class="poster-btn__arrow">→</span></a>
+        </div>
 
-      <p class="hero__tagline">Голос становится вашим мощнейшим инструментом</p>
+        <div class="hero__contacts">
+          <a href="tel:+79116744876" class="contact-line">✆ +7 (911) 674-48-76</a>
+          <a href="https://instagram.com/mixo.vocal" class="contact-line">@mixo.vocal</a>
+          <span class="rec-badge"><i class="rec-dot" aria-hidden="true"></i>REC</span>
+        </div>
+      </div>
 
-      <a href="#about" class="hero__scroll">
-        <span>Узнать больше</span>
-        <svg width="14" height="22" viewBox="0 0 14 22" fill="none"><path d="M7 1v18M1 13l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
+      <div class="hero__visual">
+        <span class="hero__blob hero__blob--yellow" aria-hidden="true"></span>
+        <span class="hero__blob hero__blob--green" aria-hidden="true"></span>
+
+        <svg class="hero__mic-graphic" viewBox="0 0 320 320" aria-hidden="true">
+          <defs>
+            <pattern id="heroDots" width="10" height="10" patternUnits="userSpaceOnUse">
+              <circle cx="5" cy="5" r="2" fill="#0A0A0A"/>
+            </pattern>
+          </defs>
+          <circle cx="160" cy="160" r="138" fill="url(#heroDots)" opacity="0.55"/>
+          <circle cx="160" cy="160" r="138" fill="none" stroke="#0A0A0A" stroke-width="3"/>
+          <g stroke="#0A0A0A" stroke-width="2">
+            <line x1="160" y1="4" x2="160" y2="26"/>
+            <line x1="160" y1="294" x2="160" y2="316"/>
+            <line x1="4" y1="160" x2="26" y2="160"/>
+            <line x1="294" y1="160" x2="316" y2="160"/>
+          </g>
+          <g transform="translate(112,88)">
+            <rect x="24" y="0" width="48" height="90" rx="24" fill="#fff" stroke="#0A0A0A" stroke-width="4"/>
+            <line x1="34" y1="24" x2="62" y2="24" stroke="#0A0A0A" stroke-width="2"/>
+            <line x1="34" y1="38" x2="62" y2="38" stroke="#0A0A0A" stroke-width="2"/>
+            <line x1="34" y1="52" x2="62" y2="52" stroke="#0A0A0A" stroke-width="2"/>
+            <path d="M4 78 a44 44 0 0 0 88 0" fill="none" stroke="#0A0A0A" stroke-width="4" stroke-linecap="round"/>
+            <line x1="48" y1="122" x2="48" y2="150" stroke="#0A0A0A" stroke-width="4" stroke-linecap="round"/>
+            <line x1="20" y1="150" x2="76" y2="150" stroke="#0A0A0A" stroke-width="4" stroke-linecap="round"/>
+          </g>
+        </svg>
+
+        <div class="polaroid">
+          <div class="polaroid__photo">
+            <svg viewBox="0 0 200 150" aria-hidden="true">
+              <rect width="200" height="150" fill="#0A0A0A"/>
+              <g fill="#FFE600">
+                <polygon points="10,150 22,108 34,150"/>
+                <polygon points="40,150 54,92 68,150"/>
+                <polygon points="74,150 86,118 98,150"/>
+                <polygon points="104,150 120,86 136,150"/>
+                <polygon points="142,150 154,112 166,150"/>
+                <polygon points="172,150 184,102 196,150"/>
+              </g>
+            </svg>
+          </div>
+          <p class="polaroid__cap">crowd energy</p>
+        </div>
+
+        <p class="hero__hashtag"># YOUR VOICE<br>YOUR POWER #</p>
+        <p class="hero__scribble" aria-hidden="true">a&nbsp;–&nbsp;вел</p>
+        <p class="hero__spray">VOICE CHANGES<br>EVERYTHING</p>
+
+        <svg class="mini-bars" viewBox="0 0 60 30" aria-hidden="true">
+          <g fill="#0A0A0A">
+            <rect x="0" y="14" width="4" height="16"/><rect x="8" y="6" width="4" height="24"/>
+            <rect x="16" y="0" width="4" height="30"/><rect x="24" y="10" width="4" height="20"/>
+            <rect x="32" y="4" width="4" height="26"/><rect x="40" y="16" width="4" height="14"/>
+            <rect x="48" y="2" width="4" height="28"/><rect x="56" y="12" width="4" height="18"/>
+          </g>
+        </svg>
+      </div>
     </div>
   </section>
 
@@ -77,10 +150,11 @@
   <section class="about" id="about">
     <div class="section__inner about__grid">
       <div class="about__label">
-        <span class="eyebrow">О студии</span>
-        <h2>Атмосфера <br />и оснащение</h2>
+        <span class="tag-chip">О СТУДИИ</span>
+        <h2 class="poster-h2">Атмосфера<br />и оснащение</h2>
       </div>
-      <div class="about__body">
+      <div class="about__body poster-card">
+        <span class="tape tape--tl" aria-hidden="true"></span>
         <p>MIXO — это профессиональная, но очень уютная студия. Мы создали её с любовью к деталям:</p>
         <ul class="about__list">
           <li>Качественная акустическая обработка для честного и чистого звука</li>
@@ -94,18 +168,21 @@
   <!-- ===================== ПРОЦЕСС ===================== -->
   <section class="process" id="process">
     <div class="section__inner">
-      <span class="eyebrow">Процесс</span>
-      <h2>Как мы работаем с голосом</h2>
+      <span class="tag-chip">ПРОЦЕСС</span>
+      <h2 class="poster-h2">Как мы работаем с голосом</h2>
       <div class="process__grid">
-        <div class="process__card">
+        <div class="process__card process__card--yellow">
+          <span class="process__num">01</span>
           <h3>Актуальные техники</h3>
           <p>Тванг, микст, бэлтинг, дисторшн, ринг, субтон и прочее. Объясняем сложное простым языком.</p>
         </div>
-        <div class="process__card">
+        <div class="process__card process__card--green">
+          <span class="process__num">02</span>
           <h3>Широта стилей</h3>
-          <p>Работаем во всех жанрах: соул, R&B, инди, альтернатива, джаз, поп- и рок-музыка.</p>
+          <p>Работаем во всех жанрах: соул, R&amp;B, инди, альтернатива, джаз, поп- и рок-музыка.</p>
         </div>
         <div class="process__card process__card--full">
+          <span class="process__num">03</span>
           <h3>Не просто ставим голос</h3>
           <p>Учим управлять голосом: познаём структуру и механику работы голосового и артикуляционного аппаратов, снимаем зажимы, развиваем музыкальность, работаем с микрофоном и сценой, практикуем импровизацию.</p>
         </div>
@@ -115,25 +192,24 @@
 
   <!-- ===================== ПРОМО-БЛОК (скидка) ===================== -->
   <section class="promo-section" id="promo">
+    <span class="promo-section__stripes" aria-hidden="true"></span>
     <div class="section__inner promo-section__inner">
-      <div class="promo-section__badge">−50%</div>
-      <p class="promo-section__text">
-        на Mixo-диагностику при покупке абонемента в день пробного занятия!
-      </p>
-      <p class="promo-section__sub">
-        Сделайте первый шаг к тому, чтобы ваш голос зазвучал так, как всегда мечталось!
-      </p>
+      <div class="ticket-stub">
+        <span class="ticket-stub__badge">−50%</span>
+        <p class="ticket-stub__text">на Mixo-диагностику при покупке абонемента в день пробного занятия!</p>
+        <p class="ticket-stub__sub">Сделайте первый шаг к тому, чтобы ваш голос зазвучал так, как всегда мечталось!</p>
+      </div>
     </div>
   </section>
 
   <!-- ===================== ЕЖЕМЕСЯЧНАЯ СКИДКА ===================== -->
   <section class="monthly-deal" id="monthly-deal">
-    <div class="section__inner monthly-deal__inner">
-      <p class="monthly-deal__badge">⭐️ Скидка ⭐️</p>
-      <h2 class="monthly-deal__title">10% на любую покупку — каждое 10-е число месяца</h2>
-      <p class="monthly-deal__text">
-        Студия Mixo подготовила для вас новое ежемесячное предложение. 10-го числа каждого месяца отныне действует скидка 10% на любую покупку.
-      </p>
+    <div class="section__inner">
+      <div class="sticky-note">
+        <p class="sticky-note__badge">★ СКИДКА ★</p>
+        <h2 class="sticky-note__title">10% на любую покупку — каждое 10-е число месяца</h2>
+        <p class="sticky-note__text">Студия Mixo подготовила для вас новое ежемесячное предложение. 10-го числа каждого месяца отныне действует скидка 10% на любую покупку.</p>
+      </div>
     </div>
   </section>
 
@@ -141,7 +217,7 @@
   <section class="pricing" id="pricing">
     <div class="section__inner">
       <span class="eyebrow eyebrow--light">Абонементы и занятия</span>
-      <h2 class="pricing__title">Выберите свой темп</h2>
+      <h2 class="pricing__title poster-h2">Выберите свой темп</h2>
 
       <div class="pricing__grid">
         <article class="plan plan--diagnostic">
@@ -206,7 +282,9 @@
 
       <div class="pricing__sunlight">
         <div class="pricing__sunlight-header">
-          <span class="pricing__sunlight-icon" aria-hidden="true">☀️</span>
+          <span class="pricing__sunlight-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" stroke-linecap="round"/></svg>
+          </span>
           <h3 class="pricing__sunlight-title">Дневные абонементы</h3>
         </div>
         <div class="pricing__sunlight-desc">
@@ -242,7 +320,7 @@
   <section class="gallery" id="gallery">
     <div class="section__inner">
       <span class="eyebrow eyebrow--light">Афиши</span>
-      <h2 class="gallery__title">Стена концертов</h2>
+      <h2 class="gallery__title poster-h2">Стена концертов</h2>
       <p class="gallery__note">Наведите или нажмите на афишу, чтобы рассмотреть её ближе.</p>
       <div class="gallery__wall" id="galleryWall">
         <!-- заполняется через posters/posters.json -->
@@ -277,8 +355,8 @@
   <section class="schedule" id="schedule">
     <div class="section__inner schedule__grid">
       <div class="schedule__block">
-        <span class="eyebrow">Расписание</span>
-        <h2>Когда мы работаем</h2>
+        <span class="tag-chip">РАСПИСАНИЕ</span>
+        <h2 class="poster-h2">Когда мы работаем</h2>
         <table class="schedule__table">
           <tr><td>Понедельник, вторник, среда</td><td>13:00 — 22:00</td></tr>
           <tr><td>Четверг</td><td>15:00 — 22:00</td></tr>
@@ -289,11 +367,11 @@
         <p class="schedule__note">Запись на занятия — по телефону или в мессенджере администратора.</p>
       </div>
       <div class="schedule__block">
-        <span class="eyebrow">Адрес</span>
-        <h2>Где нас найти</h2>
+        <span class="tag-chip">АДРЕС</span>
+        <h2 class="poster-h2">Где нас найти</h2>
         <p class="schedule__address">г. Новосибирск, ул. Российская, д. 8<br />2 этаж, студия MIXO</p>
         <p class="schedule__contacts">
-          <a href="tel:+70000000000">+7 (911) 674-48-76</a><br />
+          <a href="tel:+79116744876">+7 (911) 674-48-76</a><br />
           <a href="mailto:hello@mixovocal.ru">тут пока пусто</a>
         </p>
       </div>
