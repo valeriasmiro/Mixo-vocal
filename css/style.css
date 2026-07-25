@@ -101,6 +101,10 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; font-weight: 400; }
   outline-offset: 2px;
 }
 
+/* ---------------- Появление элементов при скролле (используется js/script.js) ---------------- */
+.reveal { opacity: 0; transition: opacity 0.5s ease; }
+.reveal.is-visible { opacity: 1; }
+
 /* ---------------- NAV ---------------- */
 .nav {
   position: sticky;
