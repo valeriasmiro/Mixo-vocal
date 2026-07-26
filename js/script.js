@@ -285,3 +285,36 @@ openLightbox = function(index) {
 
 console.log('🎤 MIXO — лаборатория современного вокала');
 console.log('🌿 Сайт загружен успешно!');
+
+/* ---------------- Редизайн: доп. reveal-элементы ---------------- */
+document.querySelectorAll('.reveal-el').forEach(revealOnScroll);
+
+/* ---------------- Редизайн: лёгкий parallax для hero-визуала ---------------- */
+if (!prefersReducedMotion) {
+  const parallaxEl = document.querySelector('[data-parallax]');
+  if (parallaxEl) {
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const offset = Math.min(window.scrollY * 0.12, 60);
+        parallaxEl.style.transform = `translateY(${offset}px)`;
+        ticking = false;
+      });
+    }, { passive: true });
+  }
+}
+
+/* ---------------- Редизайн: hover-параллакс для карточек ---------------- */
+document.querySelectorAll('.process__card, .plan, .frame').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 6;
+    const y = ((e.clientY - rect.top) / rect.height - 0.5) * -6;
+    card.style.transform = `translateY(-4px) rotateX(${y}deg) rotateY(${x}deg)`;
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = '';
+  });
+});
