@@ -104,7 +104,7 @@ h1, h2, h3 { margin: 0; font-weight: 800; }
 }
 .ambient span:nth-child(3) {
   width: 40vw; height: 40vw;
-  background: radial-gradient(circle, #7A2000 0%, transparent 72%);
+  background: radial-gradient(circle, #D81E06 0%, transparent 72%);
   top: 32%; right: 18%;
   animation: driftC 44s ease-in-out infinite alternate;
 }
@@ -192,28 +192,47 @@ h1, h2, h3 { margin: 0; font-weight: 800; }
 .rec i { width: 8px; height: 8px; border-radius: 50%; background: var(--red-glow); animation: recBlink 1.2s ease-in-out infinite; }
 @keyframes recBlink { 50% { opacity: 0.2; } }
 
-/* Абстрактная визуализация голоса вместо иконки микрофона */
-.hero__visual { position: relative; display: flex; align-items: center; justify-content: center; min-height: 420px; }
-.voice-orb { position: relative; width: 100%; max-width: 440px; aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; }
+/* ---------------- Абстрактная визуализация голоса — яркое живое свечение ---------------- */
+.hero__visual { position: relative; display: flex; align-items: center; justify-content: center; min-height: 460px; }
+.voice-orb { position: relative; width: 100%; max-width: 520px; aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; }
+
+/* Яркое световое ядро в центре */
+.voice-orb__core {
+  position: absolute;
+  width: 58%; height: 58%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #FFF4E2 0%, #FFC57E 20%, #FF9A4D 38%, var(--orange) 56%, #C41A05 76%, transparent 82%);
+  filter: blur(20px);
+  mix-blend-mode: screen;
+  animation: coreMorph 22s ease-in-out infinite, coreDrift 26s ease-in-out infinite alternate, corePulse 6.5s ease-in-out infinite;
+}
+@keyframes coreMorph {
+  0%, 100% { border-radius: 50%; }
+  40% { border-radius: 46% 54% 58% 42% / 52% 44% 56% 48%; }
+  70% { border-radius: 54% 46% 44% 56% / 46% 56% 44% 54%; }
+}
+@keyframes coreDrift { to { transform: translate(3%, -4%) scale(1.06); } }
+@keyframes corePulse { 0%, 100% { opacity: 0.85; } 50% { opacity: 1; } }
+
 .voice-orb__blob {
   position: absolute;
-  filter: blur(54px);
+  filter: blur(44px);
   mix-blend-mode: screen;
   will-change: transform, border-radius, opacity;
 }
 .voice-orb__blob--1 {
-  width: 78%; height: 78%;
-  background: radial-gradient(circle at 35% 35%, var(--orange) 0%, transparent 70%);
+  width: 84%; height: 84%;
+  background: radial-gradient(circle at 30% 30%, var(--orange) 0%, #C41A05 55%, transparent 76%);
   animation: blobMorph1 24s ease-in-out infinite, blobDrift1 32s ease-in-out infinite alternate, blobPulse1 10s ease-in-out infinite;
 }
 .voice-orb__blob--2 {
-  width: 62%; height: 62%;
-  background: radial-gradient(circle at 60% 42%, var(--red-glow) 0%, transparent 72%);
+  width: 66%; height: 66%;
+  background: radial-gradient(circle at 64% 40%, var(--red-glow) 0%, #8C0F02 62%, transparent 78%);
   animation: blobMorph2 28s ease-in-out infinite, blobDrift2 36s ease-in-out infinite alternate, blobPulse2 12s ease-in-out infinite;
 }
 .voice-orb__blob--3 {
-  width: 46%; height: 46%;
-  background: radial-gradient(circle at 45% 55%, var(--orange-light) 0%, transparent 75%);
+  width: 50%; height: 50%;
+  background: radial-gradient(circle at 45% 55%, #FFD199 0%, var(--orange-light) 42%, transparent 78%);
   animation: blobMorph3 20s ease-in-out infinite, blobDrift3 27s ease-in-out infinite alternate, blobPulse3 8s ease-in-out infinite;
 }
 @keyframes blobMorph1 {
@@ -232,22 +251,48 @@ h1, h2, h3 { margin: 0; font-weight: 800; }
 @keyframes blobDrift1 { to { transform: translate(4%, -6%) scale(1.08); } }
 @keyframes blobDrift2 { to { transform: translate(-6%, 5%) scale(1.1); } }
 @keyframes blobDrift3 { to { transform: translate(5%, 6%) scale(0.94); } }
-@keyframes blobPulse1 { 0%, 100% { opacity: 0.55; } 50% { opacity: 0.85; } }
-@keyframes blobPulse2 { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.65; } }
-@keyframes blobPulse3 { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.7; } }
+@keyframes blobPulse1 { 0%, 100% { opacity: 0.65; } 50% { opacity: 0.95; } }
+@keyframes blobPulse2 { 0%, 100% { opacity: 0.5; } 50% { opacity: 0.8; } }
+@keyframes blobPulse3 { 0%, 100% { opacity: 0.5; } 50% { opacity: 0.85; } }
 
-.voice-orb__wave { position: relative; z-index: 2; width: 74%; }
+/* Мелкие светящиеся искры — оживляют пространство */
+.voice-orb__spark {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #FFF4E2 0%, rgba(255, 180, 110, 0) 72%);
+  filter: blur(0.5px);
+  mix-blend-mode: screen;
+  animation: sparkTwinkle 4.5s ease-in-out infinite;
+}
+.voice-orb__spark--1 { width: 7px; height: 7px; top: 16%; left: 62%; animation-delay: 0s; }
+.voice-orb__spark--2 { width: 4px; height: 4px; top: 66%; left: 20%; animation-delay: 1.4s; }
+.voice-orb__spark--3 { width: 6px; height: 6px; top: 34%; left: 82%; animation-delay: 2.3s; }
+.voice-orb__spark--4 { width: 4px; height: 4px; top: 80%; left: 54%; animation-delay: 0.9s; }
+.voice-orb__spark--5 { width: 5px; height: 5px; top: 10%; left: 32%; animation-delay: 3s; }
+@keyframes sparkTwinkle {
+  0%, 100% { opacity: 0.15; transform: scale(0.8); }
+  50% { opacity: 0.95; transform: scale(1.2); }
+}
+
+/* Волна как часть световой энергии, а не отдельная графика */
+.voice-orb__wave {
+  position: relative;
+  z-index: 2;
+  width: 84%;
+  filter: drop-shadow(0 0 16px rgba(255, 154, 77, 0.75)) drop-shadow(0 0 36px rgba(232, 80, 2, 0.5));
+  mix-blend-mode: screen;
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .voice-orb__blob { animation: none; opacity: 0.55; }
+  .voice-orb__blob, .voice-orb__core, .voice-orb__spark { animation: none; opacity: 0.7; }
 }
 
 @media (max-width: 900px) {
   .hero__grid { grid-template-columns: 1fr; text-align: center; }
   .hero__desc { margin-left: auto; margin-right: auto; }
   .hero__actions, .hero__contacts { justify-content: center; }
-  .hero__visual { margin-top: 20px; min-height: 320px; }
-  .voice-orb { max-width: 300px; }
+  .hero__visual { margin-top: 20px; min-height: 340px; }
+  .voice-orb { max-width: 320px; }
 }
 
 /* ---------------- ABOUT ---------------- */
