@@ -180,14 +180,20 @@ h1, h2, h3 { margin: 0; font-weight: 800; }
   pointer-events: none;
 }
 
-/* Мягкое растворение низа Hero в общий фон — убирает жёсткую границу с следующей секцией */
+/* Мягкое растворение низа Hero — большая плавная зона без резкой полосы;
+   финальный тон совпадает с тёплым фоном следующей секции (см. .about) */
 .hero::after {
   content: "";
   position: absolute;
   left: 0; right: 0; bottom: 0;
-  height: 38%;
+  height: 62%;
   z-index: 0;
-  background: linear-gradient(180deg, transparent 0%, var(--bg) 100%);
+  background: linear-gradient(180deg,
+    transparent 0%,
+    rgba(18, 9, 6, 0.3) 45%,
+    rgba(22, 11, 7, 0.72) 75%,
+    #150B08 100%
+  );
   pointer-events: none;
 }
 
@@ -323,7 +329,7 @@ h1, h2, h3 { margin: 0; font-weight: 800; }
 
 @media (max-width: 900px) {
   .hero::before { background: linear-gradient(180deg, var(--bg) 0%, var(--bg) 40%, rgba(10,9,8,0.55) 60%, transparent 78%); }
-  .hero::after { height: 30%; }
+  .hero::after { height: 55%; }
   .hero__grid { grid-template-columns: 1fr; text-align: center; }
   .hero__desc { margin-left: auto; margin-right: auto; }
   .hero__actions, .hero__contacts { justify-content: center; }
@@ -331,18 +337,13 @@ h1, h2, h3 { margin: 0; font-weight: 800; }
   .voice-orb { max-width: 320px; }
 }
 
-/* Мягкое продолжение затемнения в начале следующей секции — сглаживает стык с Hero */
+/* Тёплый фон следующей секции — продолжает свечение Hero (тепло справа, чёрное слева),
+   плавно стыкуется с финальным тоном .hero::after (#150B08) */
 .about {
   position: relative;
-}
-.about::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 200px;
-  background: linear-gradient(180deg, rgba(10, 9, 8, 0.5) 0%, transparent 100%);
-  pointer-events: none;
-  z-index: 0;
+  background:
+    radial-gradient(120% 100% at 82% 0%, rgba(200, 62, 12, 0.14) 0%, rgba(120, 34, 10, 0.07) 34%, rgba(21, 11, 8, 0) 64%),
+    #150B08;
 }
 .about .section__inner { position: relative; z-index: 1; }
 
