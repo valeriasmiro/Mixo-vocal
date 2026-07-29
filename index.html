@@ -15,9 +15,6 @@
 
 <body>
 
-  <!-- Атмосферное свечение на фоне всей страницы -->
-  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
-
   <!-- ===================== НАВИГАЦИЯ ===================== -->
   <header class="nav" id="top">
     <div class="nav__inner">
@@ -66,48 +63,48 @@
       </div>
 
       <div class="hero__visual" data-parallax>
-        <div class="voice-orb" aria-hidden="true">
-          <span class="voice-orb__core"></span>
-          <span class="voice-orb__blob voice-orb__blob--1"></span>
-          <span class="voice-orb__blob voice-orb__blob--2"></span>
-          <span class="voice-orb__blob voice-orb__blob--3"></span>
-          <span class="voice-orb__spark voice-orb__spark--1"></span>
-          <span class="voice-orb__spark voice-orb__spark--2"></span>
-          <span class="voice-orb__spark voice-orb__spark--3"></span>
-          <span class="voice-orb__spark voice-orb__spark--4"></span>
-          <span class="voice-orb__spark voice-orb__spark--5"></span>
-
-          <svg class="voice-orb__wave" viewBox="0 0 400 160">
-            <defs>
-              <linearGradient id="waveGrad1" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stop-color="#E85002" stop-opacity="0"/>
-                <stop offset="50%" stop-color="#FFE9D2" stop-opacity="0.95"/>
-                <stop offset="100%" stop-color="#E85002" stop-opacity="0"/>
-              </linearGradient>
-              <linearGradient id="waveGrad2" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stop-color="#FF3B1F" stop-opacity="0"/>
-                <stop offset="50%" stop-color="#FFB27A" stop-opacity="0.8"/>
-                <stop offset="100%" stop-color="#FF3B1F" stop-opacity="0"/>
-              </linearGradient>
-            </defs>
-            <path fill="none" stroke="url(#waveGrad1)" stroke-width="2.5" stroke-linecap="round">
-              <animate attributeName="d" dur="9s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1" values="
-                M0,80 C50,80 50,40 100,40 C150,40 150,110 200,110 C250,110 250,55 300,55 C350,55 350,80 400,80;
-                M0,80 C50,80 50,110 100,110 C150,110 150,45 200,45 C250,45 250,95 300,95 C350,95 350,80 400,80;
-                M0,80 C50,80 50,60 100,60 C150,60 150,95 200,95 C250,95 250,50 300,50 C350,50 350,80 400,80;
-                M0,80 C50,80 50,40 100,40 C150,40 150,110 200,110 C250,110 250,55 300,55 C350,55 350,80 400,80
-              "/>
-            </path>
-            <path fill="none" stroke="url(#waveGrad2)" stroke-width="1.8" stroke-linecap="round" opacity="0.75">
-              <animate attributeName="d" dur="12s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1;0.4 0 0.2 1" values="
-                M0,90 C60,90 60,110 120,110 C180,110 180,65 240,65 C300,65 300,100 360,100 C380,100 390,90 400,90;
-                M0,90 C60,90 60,65 120,65 C180,65 180,115 240,115 C300,115 300,70 360,70 C380,70 390,90 400,90;
-                M0,90 C60,90 60,100 120,100 C180,100 180,70 240,70 C300,70 300,110 360,110 C380,110 390,90 400,90;
-                M0,90 C60,90 60,110 120,110 C180,110 180,65 240,65 C300,65 300,100 360,100 C380,100 390,90 400,90
-              "/>
-            </path>
-          </svg>
-        </div>
+        <svg class="paint-scene" viewBox="0 0 620 680" aria-hidden="true">
+          <!-- жёлтая клякса -->
+          <g class="paint-scene__yellow">
+            <path d="M300,50 C345,30 405,45 430,85 C455,115 445,150 480,170 C520,192 540,160 560,190 C580,222 550,250 520,258 C540,285 505,300 480,282 C450,308 415,288 405,258 C378,268 348,248 355,220 C322,225 295,200 305,172 C275,162 265,132 295,112 C280,88 285,60 300,50 Z" />
+            <path d="M470,120 C495,110 520,125 515,150 C535,155 540,180 518,190 C525,210 500,222 485,205 C465,215 448,198 455,178 C435,172 432,148 455,140 C450,122 458,112 470,120 Z" opacity="0.7" />
+          </g>
+          <!-- зелёная клякса (левая, крупная) -->
+          <g class="paint-scene__green">
+            <path d="M70,430 C48,398 60,355 95,345 C82,312 118,290 150,302 C160,268 205,268 216,302 C250,290 282,314 268,346 C302,356 300,398 268,420 C280,452 246,474 214,462 C202,494 158,494 148,462 C114,474 82,462 82,428 Z" />
+          </g>
+          <!-- зелёный мазок (правый, горизонтальный) -->
+          <g class="paint-scene__green">
+            <path d="M410,478 C452,456 518,462 562,478 C610,494 655,486 690,500 L690,566 C650,552 600,562 558,552 C516,542 452,552 410,536 Z" opacity="0.92" />
+          </g>
+          <!-- белые трещины поверх зелёного -->
+          <g class="paint-scene__crackle">
+            <path d="M100,360 L120,390 L105,410 L130,440" />
+            <path d="M170,320 L185,350 L165,375" />
+            <path d="M470,495 L500,505 L490,520 L520,528" />
+          </g>
+          <!-- белое кольцо -->
+          <ellipse class="paint-scene__ring" cx="430" cy="235" rx="235" ry="152" transform="rotate(-8 430 235)" />
+          <!-- белая летящая линия -->
+          <path class="paint-scene__wave" d="M20,265 C130,205 235,330 340,255 C445,182 545,305 660,225" />
+          <!-- мини-эквалайзер -->
+          <g class="paint-scene__bars">
+            <rect x="500" y="150" width="5" height="34"/>
+            <rect x="512" y="136" width="5" height="48"/>
+            <rect x="524" y="158" width="5" height="26"/>
+            <rect x="536" y="128" width="5" height="56"/>
+            <rect x="548" y="146" width="5" height="38"/>
+            <rect x="560" y="160" width="5" height="24"/>
+          </g>
+          <!-- разбросанные плюсы -->
+          <g class="paint-scene__plus">
+            <path d="M18,215 h16 M26,207 v16" />
+            <path d="M592,52 h16 M600,44 v16" />
+            <path d="M598,330 h18 M607,321 v18" />
+            <path d="M596,562 h16 M604,554 v16" />
+            <path d="M28,608 h14 M35,601 v14" />
+          </g>
+        </svg>
       </div>
     </div>
   </section>
